@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/wall"
+        app:layout_constraintHeight_percent="0.5"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/desc_kiri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="60dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/desc_kanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="60dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/desc_atas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/desc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/arrow_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/arrow_guide"
+        android:src="@drawable/ic_outline_arrow_back_24"/>
+
+    <TextView
+        android:id="@+id/title_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Capailah lantai 100 jika Anda ingin keluar dari permainan ini. Jika Anda mati di dalam permainan, maka di dunia nyata nyawa Anda pun berakhir"
+        android:textAlignment="center"
+        android:textColor="#F4F4F4"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/desc_kanan"
+        app:layout_constraintStart_toStartOf="@id/desc_kiri"
+        app:layout_constraintTop_toTopOf="@id/desc_atas" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Swords Art Online"
+        android:textAlignment="center"
+        android:textColor="#F4F4F4"
+        android:textSize="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="@id/desc_kanan"
+        app:layout_constraintStart_toStartOf="@id/desc_kiri"
+        app:layout_constraintBottom_toTopOf="@id/title_desc" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/mid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp"
+        app:cardCornerRadius="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/card_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/card_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="24dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/card_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="32dp"/>
+
+            <TextView
+                android:id="@+id/TvJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Joined Player"
+                android:textColor="@color/card_title"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/card_left"
+                app:layout_constraintTop_toTopOf="@id/card_top" />
+
+
+            <ImageView
+                android:id="@+id/player1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/player1"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@id/card_left"
+                app:layout_constraintTop_toBottomOf="@id/TvJoin"/>
+
+            <ImageView
+                android:id="@+id/player2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/player2"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@id/card_left"
+                app:layout_constraintTop_toBottomOf="@id/player1"/>
+
+            <ImageView
+                android:id="@+id/player3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/player3"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@id/card_left"
+                app:layout_constraintTop_toBottomOf="@id/player2"/>
+
+            <TextView
+                android:id="@+id/TvPlayer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Kirito"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toEndOf="@id/player1"
+                app:layout_constraintTop_toTopOf="@id/player1"
+                app:layout_constraintBottom_toTopOf="@id/TvPlayerStat1"
+                android:layout_marginLeft="14sp"/>
+
+            <TextView
+                android:id="@+id/TvPlayerStat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="The Black Swordsman"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toStartOf="@id/TvPlayer1"
+                app:layout_constraintTop_toBottomOf="@id/TvPlayer1"
+                app:layout_constraintBottom_toBottomOf="@id/player1"/>
+
+            <TextView
+                android:id="@+id/TvPlayer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Asuna"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toEndOf="@id/player2"
+                app:layout_constraintTop_toTopOf="@id/player2"
+                app:layout_constraintBottom_toTopOf="@id/TvPlayerStat2"
+                android:layout_marginLeft="14sp"/>
+
+            <TextView
+                android:id="@+id/TvPlayerStat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Queen of Knight"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toStartOf="@id/TvPlayer2"
+                app:layout_constraintTop_toBottomOf="@id/TvPlayer2"
+                app:layout_constraintBottom_toBottomOf="@id/player2"/>
+
+            <TextView
+                android:id="@+id/TvPlayer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Death Gun"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toEndOf="@id/player3"
+                app:layout_constraintTop_toTopOf="@id/player3"
+                app:layout_constraintBottom_toTopOf="@id/TvPlayerStat3"
+                android:layout_marginLeft="14sp"/>
+
+            <TextView
+                android:id="@+id/TvPlayerStat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Soul Eater"
+                android:textColor="#020827"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintStart_toStartOf="@id/TvPlayer3"
+                app:layout_constraintTop_toBottomOf="@id/TvPlayer3"
+                app:layout_constraintBottom_toBottomOf="@id/player3"/>
+
+            <TextView
+                android:id="@+id/TvParty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level Points"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toStartOf="@id/card_right"
+                app:layout_constraintTop_toTopOf="@id/card_top"
+                android:textColor="@color/card_rank"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/point1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lvl 99"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toStartOf="@id/card_right"
+                app:layout_constraintTop_toTopOf="@id/player1"
+                app:layout_constraintBottom_toBottomOf="@id/player1"
+                app:layout_constraintStart_toStartOf="@+id/TvParty"
+                android:textColor="@color/card_rank"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/point2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lvl 95"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toStartOf="@id/card_right"
+                app:layout_constraintTop_toTopOf="@id/player2"
+                app:layout_constraintBottom_toBottomOf="@id/player2"
+                app:layout_constraintStart_toStartOf="@+id/TvParty"
+                android:textColor="@color/card_rank"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lvl 91"
+                android:fontFamily="@font/roboto"
+                app:layout_constraintEnd_toStartOf="@id/card_right"
+                app:layout_constraintTop_toTopOf="@id/player3"
+                app:layout_constraintBottom_toBottomOf="@id/player3"
+                app:layout_constraintStart_toStartOf="@+id/TvParty"
+                android:textColor="@color/card_rank"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button1"
+                android:padding="5dp"
+                android:text="Link Start!"
+                android:textColor="#EBECF6"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@id/card_left"
+                app:layout_constraintEnd_toEndOf="@id/card_right"
+                app:layout_constraintTop_toBottomOf="@id/player3"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
